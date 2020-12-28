@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "ADFS Claims";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>ADFS Claims are shown below.</p>
+
+@model IEnumerable<System.Security.Claims.Claim>
+<dl>
+    @foreach(var claim in Model)
+    {
+        <dd>@claim.Type</dd>
+        <dt>@claim.Value</dt>
+    }
+</dl>
